@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    
+    <link href="views/AerliHome/AerliHome.css" rel="stylesheet">
+    <link href="views/AerliItem/AerliItem.css" rel="stylesheet">
+    <link href="views/AerliStyle/AerliStyle.css" rel="stylesheet">
+    <link href="views/AerliPopular/AerliPopular.css" rel="stylesheet">
+    <link href="views/AerliFashion/AerliFashion.css" rel="stylesheet">
+    <link href="views/AerliElement/AerliElement.css" rel="stylesheet">
+    <link href="views/AerliLogin/AerliLogin.css" rel="stylesheet">
+    <link href="views/AerliDetails/AerliDetails.css" rel="stylesheet">
+    <link href="views/AerliIntroduce/AerliIntroduce.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="views/AerliHome/AerliHome.js"></script>
+    <script src="views/AerliItem/AerliItem.js"></script>
+    <script src="views/AerliStyle/AerliStyle.js"></script>
+    <script src="views/AerliPopular/AerliPopular.js"></script>
+    <script src="views/AerliFashion/AerliFashion.js"></script>
+    <script src="views/AerliElement/AerliElement.js"></script>
+    <script src="views/AerliLogin/AerliLogin.js"></script>
+    <script src="views/AerliDetails/AerliDetails.js"></script>
+    <script src="views/AerliIntroduce/AerliIntroduce.js"></script>
+    
+    <style type="text/css">
+			.bar .title{
+				font-weight: bold;
+				font-size: 1.5em;
+			}
+    	.bar .button, .bar button{
+    		line-height: 0;
+    	}
+    	.bar{
+    		padding-left: 0;
+    		padding-right: 0;
+    	}
+    	.navbutton{
+    		width: 100%;
+    		overflow: hidden;
+    	}
+    	.navbutton li{
+    		width: 25%;
+    		height: 20%;
+    		text-align: center;
+    		background: #FFFFFF;
+    		float: left;
+    		padding: 30px 0 5px;
+    	}
+    	.navbutton li a img{
+    		width: 55%;
+    	}
+    	.info {
+				padding-right: 10px !important;
+			}
+    </style>
+  </head>
+  <body ng-app="App">
+    <div class="bar bar-header bar-light">
+			<h1 class="title">穿衣助手</h1>
+			<div ng-controller="navCtrl" style="width: 100%;">
+				<button style="margin-left: 10px;" ng-mousedown="btnClick()" class="button button-icon icon ion-navicon"></button>
+				<div class="r">
+					<a class="button button-clear icon ion-ios-person-outline info" ng-href="#/AerliLogin"></a>
+					<a class="button button-clear icon ion-ios-cart-outline info"></a>
+				</div>
+				<ul class="bg_white navbutton" ng-show="navshow" ng-if="navbtns">
+					<li ng-repeat="(i,suit) in navbtns">
+						<a ng-if="i==0" ng-href="#/home" ng-click="imgclick()">
+							<img class="db auto" src="https://image1.ichuanyi.cn/{{suit.icon}}!w100png" />
+							<span>{{suit.text}}</span>
+						</a>
+						<a ng-if="i>0&&i<3" ng-href="#" ng-click="imgclick()">
+							<img class="db auto" src="https://image1.ichuanyi.cn/{{suit.icon}}!w100png" />
+							<span>{{suit.text}}</span>
+						</a>
+						<a ng-if="i==3" ng-href="#/AerliStyle" ng-click="imgclick()">
+							<img class="db auto" src="https://image1.ichuanyi.cn/{{suit.icon}}!w100png" />
+							<span>{{suit.text}}</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>
+

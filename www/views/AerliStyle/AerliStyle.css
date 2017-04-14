@@ -1,0 +1,133 @@
+.contents{
+	padding-top: 43px;
+	margin-bottom: 15px;
+}
+h3{
+	text-align: center;
+	color: #444444;
+	font-size: 1.5rem;
+	padding-top: 40px;
+	font-family: "微软雅黑";
+	margin-bottom: 15px;
+}
+section>p{
+	width: 50px;
+	height: 4px;
+	background: #9D5AAD;
+	margin: 0 auto 30px;
+}
+.guesslis{
+	width: 82rem;
+}
+.guess{
+	width: 9rem;
+	height: 3.2rem;
+	margin: 0 10px;
+	position: relative;
+	border-radius: 10px;
+}
+.bag{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.3);
+	z-index: 10;
+}
+.bag p{
+	width: 100%;
+	height: 100%;
+	color: #FFFFFF;
+	font-size: 1.3rem;
+	text-align: center;
+	font-family: "微软雅黑";
+}
+li>a{
+	width: 100%;
+	height: 100%;
+}
+.guess img{
+	width: 100%;
+}
+
+/**/
+.fashionlis{
+	width: 75rem;
+}
+.fashion{
+	width: 10rem;
+	height: 13rem;
+	margin: 0 5px;
+	position: relative;
+	text-align: center;
+}
+.fashion:last-child img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.fashion img{
+	width: 200%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: -50%;
+}
+/**/
+.guides{
+	position: relative;
+}
+.guides img{
+	width: 120%;
+	height: 200%;
+}
+.guide{
+	width: 67%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: .5rem 0;
+}
+.guide li{
+	width: 3.2rem;
+	height: 2rem;
+	border: 1px solid #FFFFFF;
+	margin: 5px;
+	text-align: center;
+	line-height: 2rem;
+	font-size: .8rem;
+}
+.featureslist{
+	width: 70rem;
+}
+.features{
+	margin: 0 5px;
+}
+.features img{
+	height: 10rem;
+}
+
+.gd{
+	width: 100%;
+	padding: 60px 0;
+}
+.gd div{
+	width: 8rem;
+	height: 2.5rem;
+	border: 1px solid #666666;
+	color: #666666;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 2.5rem;
+	font-size: 1rem;
+}
+
+.color{
+	color: #9D5AAD;
+}
+.colors{
+	color: #000000;
+}

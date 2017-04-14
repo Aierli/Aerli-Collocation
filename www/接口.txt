@@ -1,0 +1,59 @@
+<!--
+首页：https://ichuanyi.com/m.php?method=index.getHomeData
+
+轮播图：banner
+https://image1.ichuanyi.cn/group3/M00/E2/E1/CgAAGljnnssEAAAAAAAAAOxXEkw339.jpg?imageView2/1/w/640/h/325/q/60
+
+当季必备：inSeason
+
+导航：suitTabs
+
+热销上新优选：buyBlockList
+
+
+周末福利购：modules  0  0  list 0
+
+时尚频道：modules  1  0/1  list  0
+
+流行元素：modules  2  0/1/2  list  0
+
+挑款师精选：modules  3  0/1  list  0
+
+
+列表：https://ichuanyi.com/m.php?fromPageId=0&pageSize=20&viewUserId=&method=index.getChoicenessList&page=1
+
+
+第二页：https://ichuanyi.com/m.php?method=goods.getTagCategory    更多
+
+
+第三页：
+
+https://ichuanyi.com/m.php?method=fashion.dressManual&viewUserId=
+猜你想看：tags
+
+时尚频道：topics
+
+穿搭指南：guide Tage
+
+全部主题：medias
+
+
+第四页：热销榜
+https://ichuanyi.com/m.php?fromPageId=0&pageSize=20&page=1&cardId=177&method=goods.getListByCard&page=1
+
+第五页：时尚频道
+https://ichuanyi.com/m.php?mediaId=1458828486&method=media.getMedia&pageSize=20&page=1&isFromApp=NaN&isICYPage=false
+
+第六页：流行元素
+https://ichuanyi.com/m.php?mediaId=1458828456&method=media.getMedia&pageSize=20&page=1&isFromApp=NaN&isICYPage=false
+
+
+
+第***页：https://ichuanyi.com/m.php?method=userinfo.getPreRegImage    登录
+
+第***页：https://ichuanyi.com/index.php?method=search.getKeywords
+goods
+
+https://image1.ichuanyi.cn/group2/M00/88/37/CgAANVYwYOkEAAAAAAAAAFUWJa0307.png
+https://ydcdn2.ichuanyi.cn/media/m/image/page/custom_suit/images/customSuit/resultImages/banner_819ee50.jpg?imageMogr2/thumbnail/750x
+-->

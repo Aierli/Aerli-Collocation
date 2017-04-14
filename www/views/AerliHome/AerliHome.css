@@ -1,0 +1,167 @@
+html {
+	font-family: "微软雅黑"!important;
+}
+.scroll-content{
+	background: #F6F3EE;
+}
+.bar{
+	border: none;
+}
+.bar.bar-stable{
+	background: #FFFFFF;
+}
+.bar .button, .bar button{
+	min-height: 100%;
+	line-height: 380%;
+	padding: 0;
+}
+.bar-stable .button{
+	border: none;
+	background: #FFFFFF;
+}
+.bar-stable .button img{
+	width: 60%;
+	height: 60%;
+}
+.bg_white{
+	background: #FFFFFF;
+}
+.home{
+	width: 100%;
+}
+/*轮播图*/
+.slider{
+	padding-top: 43px;
+}
+.slider .slider-slides{
+	/*width: 100%!important;*/
+}
+/*.ban{
+	width: 100%;
+}*/
+.ban img{
+	width: 100%;
+	height: 100%;
+}
+
+.slider-pager .slider-pager-page{
+	width: 10px;
+	color: #D075EA;
+	margin: 0 5px;
+}
+/*当季必备*/
+.seasons{
+	width: 100%;
+	padding: 10px;
+	border-bottom: #E4E5E7 solid 1px;
+	overflow: hidden;
+}
+.season{
+	width: 80%;
+	display: inline-block;
+}
+.season span{
+	margin: 0 4px;
+	color: #666666;
+}
+.season span:first-child{
+	font-size: 16px;
+}
+.season .bj{
+	color: #333333;
+	background: #F5F5F5;
+	font-size: 10px;
+	padding: 5px;
+	border-radius: 10px;
+}
+.seasons a{
+	float: right;
+	color: #AD64BF;
+	font-size: 18px;
+}
+
+.buyBlockList{
+	width: 100%;
+	margin-top: 10px;
+	overflow: hidden;
+}
+.buyBlock{
+	width: 43%;
+	float: left;
+}
+.buyBlock a{
+	width: 100%;
+	height: 100%;
+}
+.buyBlock a img{
+	width: 100%;
+}
+.buyBlock1{
+	width: 57%;
+	float: left;
+}
+.buyBlock1 a{
+	width: 100%;
+	height: 100%;
+}
+.buyBlock1 a img{
+	width: 100%;
+}
+
+/**/
+.moduless>div{
+	margin-top: 10px;
+	padding: 0 10px;
+}
+.widthbfb{
+	width: 100%;
+}
+.overflow{
+	overflow: hidden;
+}
+.fash{
+	width: 2200px;
+}
+.fash a{
+	width: 200px;
+}
+.handpick{
+	width: 5500px;
+}
+.handpick a{
+	width: 200px;
+	margin-right: 10px;
+}
+.populars a{
+	width: calc(100% / 3);
+}
+.aerlilist{
+	width: 48%;
+	margin: 5px 1% 15px;
+	padding: 10px 5px;
+}
+.aerlilist>img{
+	width: 100%;
+}
+.aerli{
+	height: 40px;
+}
+.aerli>img{
+	height: 100%;
+}
+.aerli>span{
+	display: inline-block;
+}
+.aerli span{
+	font-size: 1rem;
+	font-family: "微软雅黑";
+	line-height: 50px;
+	margin-left: 5px;
+}
+.aerli .user{
+	width: 30%;
+}
+.aerli .count span{
+	margin: 0 3px;
+	color: #999999;
+}

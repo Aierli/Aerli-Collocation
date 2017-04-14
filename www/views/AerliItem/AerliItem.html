@@ -1,0 +1,24 @@
+<ion-view>
+	<ion-content class="item">
+		<h2 class="items bg_white">
+			单品
+		</h2>
+		<div class="bg_white overflow itemlis">
+			<ul class="l itemli bg_white">
+				<li ng-class="{actives : $index == actives}" ng-click="isClick($index)" ng-repeat="itemlis in itemlist">
+					<a href="javascript:void(0)">{{itemlis.name}}</a>
+				</li>
+			</ul>
+			<div ng-class="{zindex : $index == zindex}" class="l itemlist"  ng-repeat="itemlis in itemlist">
+				<ul class="overflow fixeds">
+					<li class="l" ng-repeat="fixed in itemlis.tags.fixedTags">
+						<a>
+							<img ng-src="https://image1.ichuanyi.cn/{{fixed.pic}}"/>
+							<p>{{fixed.name}}</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

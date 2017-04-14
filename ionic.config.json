@@ -1,0 +1,10 @@
+{
+  "name": "AerliMusic",
+  "app_id": "",
+  "proxies": [
+              {
+                "path": "/Aerli",
+                "proxyUrl": "https://ichuanyi.com"
+              }
+            ]
+}

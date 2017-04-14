@@ -1,0 +1,91 @@
+<ion-view view-title="商品详情">
+	<ion-content>
+		<div class="AerliIntroduce familys">
+			<ion-slide-box  does-continue="true" on-slide-changed="slideHasChanged($index)" auto-play="true" slide-interval="2000" show-pager="true" pager-click="pageClick(index)" active-slide="model.activeIndex" delegate-handle="delegateHandler">
+	            <ion-slide ng-repeat="(ins,Introduce) in AerliIntroduce.photoAlbum">
+	                <div class="ban">
+		                <img ng-src="https://image1.ichuanyi.cn/{{Introduce.image}}?imageMogr/v2/auto-orient/thumbnail/!290x/quality/80/" alt="">
+	                </div>
+	                <div class="which">
+	                	<span>{{ins*1+1}}/{{len}}</span>
+	                </div>
+	            </ion-slide>
+	        </ion-slide-box>
+	        <div class="introduce bg_white">
+	        	<p>{{AerliIntroduce.name}}</p>
+	        	<p class="showPrices overflow">
+	        		<span class="l">{{AerliIntroduce.showPrice}}</span>
+	        		<span class="l">{{AerliIntroduce.originalPrice | currency:'￥'}}</span>
+	        		<span>5.0折</span>
+	        		<span class="r">已售{{AerliIntroduce.soldInOuter}}件</span>
+	        	</p>
+	        	<p class="soldInOuter">
+	        		<span class="l">已售{{AerliIntroduce.soldInOuter}}件</span>
+	        		<span>100.00%好评</span>
+	        		<span class="r">{{AerliIntroduce.collectCount}}人喜欢</span>
+	        	</p>
+	        </div>
+	        <div class="usernames bg_white">
+	        	<div class="user overflow">
+	        		<img class="l" ng-src="https://image1.ichuanyi.cn/{{AerliIntroduce.ownerInfo.avatar}}?imageMogr/v2/auto-orient/thumbnail/!290x/quality/80/"/>
+	        		<div class="l">
+	        			<p>
+	        				<span>{{AerliIntroduce.ownerInfo.username}}</span>
+	        				<span>{{AerliIntroduce.ownerInfo.location}}</span>
+	        			</p>
+	        			<p class="ellipsis">{{AerliIntroduce.ownerInfo.description}}</p>
+	        		</div>
+	        		<span class="r">></span>
+	        	</div>
+	        	<p>{{AerliIntroduce.ownerInfo.description}}</p>
+	        	<img ng-src="https://image1.ichuanyi.cn/{{AerliIntroduce.ownerInfo.banner.image}}?imageMogr/v2/auto-orient/thumbnail/!290x/quality/80/" alt="" />
+	        </div>
+	        <div class="afix bg_white">
+	        	<section class="graphics" ion-affix data-affix-within-parent-with-class="afix">
+		        	<a href="" ng-class="{'jclass':boolphototext}" ng-click="phototext()" class="jj">图文详情</a>
+		        	<a href="" ng-class="{'jclass':boolsize}" ng-click="size()" class="jj jzhong">尺码材质</a>
+		        	<a href="" ng-class="{'jclass':boolvalue}" ng-click="size()" class="jj jtop">评价（{{AerliIntroduce.commentStatistics.commentCount}}）</a>
+		        </section>
+		        <!--图文详情 -->
+				<div ng-if="boolphototext" class="jsame" ng-repeat="(i,text) in teletext">
+					<p class="teletext jpurpletop">{{text.titleZH}}</p>
+					<p class="teletext jpurple">{{text.titleEN}}</p>
+					<div class="jboth" ng-repeat="img in text.suits" >
+						<img class="jdapei" src="https://image1.ichuanyi.cn/{{img.image}}?imageMogr/v2/auto-orient/thumbnail/x280/quality/80/format/jpg" alt="" /><br/>
+						<span class="jgoogd" ng-if="img.price">共{{img.goodsCount}}件商品，搭配省￥{{img.price*0.1 | myfilte}} 元</span>
+					</div>
+					<p class="jdesign">{{text.sellerMessage}}</p>
+					<p class="jsize" ng-if="text.type==3" ng-repeat="size in sizeMaterial.properties">{{size.propertyName}} ：{{size.value}}</p>
+					<img class="jxiaoguo" ng-repeat="imgs in text.images" src="https://image1.ichuanyi.cn/{{imgs.image}}?imageMogr/v2/auto-orient/thumbnail/600x/quality/100/format/jpg?imageMogr/v2/auto-orient/thumbnail/600x/quality/100/format/jpg" alt="" />
+				</div>
+				<!--尺码材质-->
+				<div ng-if="boolsize" class="jsame">
+					<p class="jsize" ng-repeat="size in sizeMaterial.properties">{{size.propertyName}} ：{{size.value}}</p>
+					<img class="jxiaoguo" ng-repeat="size in sizeMaterial.sizeImages" src="https://image1.ichuanyi.cn/{{size.image}}?imageMogr/v2/auto-orient/thumbnail/600x/quality/100/format/jpg" alt="" />
+				</div>
+				<!--评价-->
+				<!--<div ng-if="boolvalue" class="jsame jvalue">
+					<div class="jiaonang">
+						<button class="jall" ng-click="clickBtn(0)">全部({{commentStatistics.commentCount}})</button>
+						<button class=" jbutton" ng-click="clickBtn(1)">好评<span class="jspan">({{commentStatistics.goodCount}})</span></button>
+						<button class=" jbutton" ng-click="clickBtn(2)" >中评<span class="jspan">({{commentStatistics.middleCount}})</span></button>
+						<button class=" jbutton" ng-click="clickBtn(4)" >差评<span class="jspan">({{commentStatistics.badCount}})</span></button>
+						<button class=" jbutton" ng-click="clickBtn(5)" >有图<span class="jspan">({{commentStatistics.imageCount}})</span></button>
+					</div>
+					<section class="jjutipingjia" ng-repeat="li in lists">
+						<div>
+							<img class="jtouxiang" src="https://image1.ichuanyi.cn/{{li.avatar}}?imageMogr/v2/auto-orient/thumbnail/43x/quality/60/format/jpg" alt="" />
+							<span>{{li.username}}</span>
+							<span class="jgoodbad">{{li.properties[0].value}}</span>
+						</div>
+						<div class="jnei">
+							<p class="jgoodping">{{li.comment}}</p>
+							<p class="jguige">{{li.properties[1].propertyName}}：{{li.properties[1].value}}{{li.properties[2].propertyName}}：{{li.properties[2].value}}</p>
+							<img class="jpimg" ng-repeat="ima in li.images" src="https://image1.ichuanyi.cn/{{ima.image}}?imageMogr/v2/auto-orient/quality/60/format/jpg" alt="" />
+						</div>
+					</section>
+				</div>-->
+	        </div>
+		</div>
+	</ion-content>
+</ion-view>

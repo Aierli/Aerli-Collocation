@@ -1,0 +1,206 @@
+.familys .ban img{
+	width: 100%;
+	height: 400px;
+}
+.familys{
+	font-family: "微软雅黑";
+}
+.familys .slider-pager{
+	display: none;
+}
+.which{
+	border: 1px solid #D9D9D9;
+	padding: 1px;
+	background: white;
+	width: 50px;
+	position: absolute;
+	right: 15px;
+	bottom: 20px;
+	text-align: center;
+}
+
+
+.introduce{
+	padding: 30px 10px 10px;
+}
+.introduce P:first-child{
+	font-size: 1.5rem;
+	color: #666666;
+}
+.showPrices{
+	line-height: 50px;
+}
+.showPrices span:first-child{
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+.showPrices span:nth-of-type(2){
+	text-decoration: line-through;
+	color: #999999;
+	margin: 0 10px;
+}
+.showPrices span:nth-of-type(3){
+	padding: 2px 8px;
+	border: 1px solid #8A5799;
+	color: #8A5799;
+}
+.soldInOuter{
+	margin-top: 30px;
+	padding-top: 20px;
+	color: #999999;
+	text-align: center;
+}
+.usernames{
+	margin-top: 20px;
+	padding: 0 10px;
+}
+.user{
+	height: 80px;
+}
+.user img{
+	width: 20%;
+	height: 100%;
+	line-height: 200px;
+}
+.user>div{
+	width: 60%;
+	line-height: 40px;
+	padding: 20px 0;
+	padding-left: 5px;
+	line-height: 25px;
+}
+.user>div p{
+	margin: 0;
+	font-size: 1rem;
+	color: #999999;
+}
+.user>div p span:first-child{
+	font-weight: bold;
+	color: #333333;
+}
+.user>span{
+	margin-top: 40px;
+	font-size: 1.2rem;
+	color: #999999;
+}
+.usernames>p{
+	font-size: 1rem;
+}
+.usernames>img{
+	width: 100%;
+}
+
+.graphics{
+	margin-top: 15px;
+	line-height: 30px;
+	overflow: hidden;
+}
+.graphics a{
+	margin: 15px 0 0;
+	display: inline-block;
+	float: left;
+	width: calc(100% / 3);
+	text-align: center;
+	font-size: 1rem;
+	color: #999999;
+	/*border-bottom: 1px solid #D1D3D6;*/
+}
+.graphics a:nth-of-type(2){
+	border-left: 1px solid #D1D3D6;
+	border-right: 1px solid #D1D3D6;
+}
+.teletext{
+	text-align: center;
+}
+.jxiaoguo{
+	width: 96vw;
+	padding: 3px 2.5vw ;
+}
+.jsize{
+	padding-left: 13px;
+}
+.graphics .jclass{
+	margin-bottom: 15px;
+	border-bottom: #9452A8 solid 3px;
+	color: #9452A8;
+}
+
+.jpurple{
+	font-family:  "arial black";
+	font-weight: 10px;
+	color: #B594BE;
+	font-size: 0.1rem;
+}
+.jpurpletop{
+	margin-bottom: -0.4rem;
+}
+.jdesign{
+	padding: 13px;
+	font-family: "微软雅黑";
+}
+.jboth{
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 13px;
+}
+.jgoogd{
+	padding: 7px 0 13px 0;
+	color: #4F4F4F;
+}
+
+.jiaonang{
+	text-align: center;
+	
+}
+.jall{
+	background: #8A5899;
+	border: #8A5899 1px solid;
+	color: white;
+	height: 23px;
+	width: 60px;
+}
+.jbutton{
+	border:1px solid #8A5899;
+	background: white;
+	color:#8A5899 ;
+	margin: 5px;
+	width: 68px;
+}
+.jspan{
+	color: #4D4D4D;
+}
+.jjutipingjia{
+	padding: 13px;
+	border-top: 1px solid gainsboro;
+	margin-top: 5px;
+}
+.jnei{
+	padding-left: 30px;
+}
+.jtouxiang{
+	border-radius: 50%;
+	width: 30px;
+	
+}
+.jgoodping{
+	margin-top: 20px ;
+	color: #333;
+}
+.jguige{
+	color: #999;
+}
+.jgoodbad{
+	float: right;
+	color: #8A5899;
+}
+.jpimg{
+	width: 75px;
+}
+.jdapei{
+	width: 45vw;
+}
+
+.jvalue{
+	min-height: 100px;
+}

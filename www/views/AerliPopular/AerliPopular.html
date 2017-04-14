@@ -1,0 +1,22 @@
+<ion-view view-title="热销榜">
+	<ion-content>
+		<div class="contents bg_white">
+			<img class="popul" ng-src="https://image1.ichuanyi.cn/{{popularlist.banner.image}}" alt="热销榜" />
+			<ul class="popularlist overflow">
+				<li class="popular l" ng-repeat="popular in popularlist.goodsList">
+					<a ng-href="#/AerliIntroduce/{{popular.goodsId}}">
+						<img ng-src="https://image1.ichuanyi.cn/{{popular.image}}"/>
+						<p class="name1 ellipsis">{{popular.name}}</p>
+						<p>
+							<span>{{popular.price | currency:'￥'}}</span>
+							<i>{{popular.originalPrice | currency:'￥'}}</i>
+						</p>
+					</a>
+				</li>
+			</ul>
+			<ion-infinite-scroll on-infinite="loadMore()" distance="10%">
+				
+			</ion-infinite-scroll>
+		</div>
+	</ion-content>
+</ion-view>

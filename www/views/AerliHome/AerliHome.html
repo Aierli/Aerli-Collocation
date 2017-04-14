@@ -1,0 +1,132 @@
+<ion-view view-title="穿衣助手">
+	<ion-content class="home">
+		<!--轮播图-->
+		<ion-slide-box ng-if="banners" does-continue="true" on-slide-changed="slideHasChanged($index)" auto-play="true" slide-interval="1000" show-pager="true" pager-click="pageClick(index)" active-slide="model.activeIndex" delegate-handle="delegateHandler">
+            <ion-slide ng-repeat="banner in banners">
+                <div class="ban">
+	                <img ng-src="https://image1.ichuanyi.cn/{{banner.image}}?imageView2/1/w/640/h/325/q/60" alt="">
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+        <!--<ion-slide-box on-slide-changed="slideHasChanged($index)" auto-play="true" does-continue="true" slide-interval='2000' show-pager="true" pager-click="pageClick(index)" active-slide="model.activeIndex" delegate-handle="delegateHandler">
+            <ion-slide>
+                <div class="ban">
+	                <img src="../../img/adam.jpg"/>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="ban">
+	                <img src="../../img/ben.png"/>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="ban">
+	                <img src="../../img/mike.png"/>
+                </div>
+            </ion-slide>
+        </ion-slide-box>-->
+		
+		<!--当季必备-->
+		<div class="seasons bg_white">
+			<div class="season ellipsis">
+				<span>当季必备</span>
+				<span>|</span>
+				<span class="bj" ng-repeat="inSeason in inSeasons.tags">{{inSeason.name}}</span>
+			</div>
+			<a href="#/AerliItem">更多》</a>
+		</div>
+		<!--导航-->
+		<ul class="bg_white navbutton">
+			<li ng-repeat="(i,suitTabs) in suitTabss">
+				<a ng-if="i==0" ng-href="#/AerliStyle">
+					<img class="db auto" ng-src="https://image1.ichuanyi.cn/{{suitTabs.image}}"/>
+					<span class="auto">{{suitTabs.name}}</span>
+				</a>
+				<a ng-if="i==1">
+					<img class="db auto" ng-src="https://image1.ichuanyi.cn/{{suitTabs.image}}"/>
+					<span class="auto">{{suitTabs.name}}</span>
+				</a>
+				<a ng-if="i==2">
+					<img class="db auto" ng-src="https://image1.ichuanyi.cn/{{suitTabs.image}}"/>
+					<span class="auto">{{suitTabs.name}}</span>
+				</a>
+				<a ng-if="i==3" ng-href="#">
+					<img class="db auto" ng-src="https://image1.ichuanyi.cn/{{suitTabs.image}}"/>
+					<span class="auto">{{suitTabs.name}}</span>
+				</a>
+			</li>
+		</ul>
+		<!--热卖榜单-->
+		<div class="host_wrap bg_white buyBlockList">
+			<div class="buyBlock" ng-if="i==0" ng-repeat="(i,buyBlockList) in buyBlockLists">
+				<a ng-href="#/AerliPopular/{{i}}">
+					<img ng-src="https://image1.ichuanyi.cn/{{buyBlockList.image.path}}"/>
+				</a>
+			</div>
+			<div class="buyBlock1" ng-if="i>0" ng-repeat="(i,buyBlockList) in buyBlockLists">
+				<a ng-href="#/AerliPopular/{{i}}">
+					<img ng-src="https://image1.ichuanyi.cn/{{buyBlockList.image.path}}"/>
+				</a>
+			</div>
+		</div>
+		
+		<div class="moduless">
+			<!--周末购-->
+			<!--<div ng-if="i==0" ng-repeat="(i,modules) in moduless">
+				<img class="widthbfb" ng-src="https://image1.ichuanyi.cn/{{modules[0].list[0].image}}?imageMogr2/thumbnail/620x"/>
+			</div>-->
+			<!--时尚频道-->
+			<div class="bg_white" ng-if="i==0" ng-repeat="(i,modules) in moduless">
+				<img class="widthbfb" ng-src="https://image1.ichuanyi.cn/{{modules[0].list[0].image}}"/>
+				<ion-scroll direction="x" scrollbar-x="false" scrollbar-y="false" class="widthbfb">
+					<div class="fash overflow">
+						<a ng-href="#/AerliFashion/{{module.link | myhref}}" class="module l" ng-repeat="(i,module) in modules[1].list">
+							<img class="widthbfb" ng-src="https://image1.ichuanyi.cn/{{module.image}}"/>
+						</a>
+					</div>
+				</ion-scroll>
+			</div>
+			<!--流行元素-->
+			<div class="bg_white" ng-if="i==1" ng-repeat="(i,modules) in moduless">
+				<img class="widthbfb" ng-src="https://image1.ichuanyi.cn/{{modules[0].list[0].image}}"/>
+				<div class="populars widthbfb overflow">
+					<a ng-href="#/AerliElement/{{module.link | myhref}}" class="l" ng-repeat="(i,module) in modules[1].list">
+						<img class="l widthbfb" ng-src="https://image1.ichuanyi.cn/{{module.image}}"/>
+					</a>
+					<a ng-href="#/AerliElement/{{module.link | myhref}}" class="l" ng-repeat="(i,module) in modules[2].list">
+						<img class="l widthbfb" ng-src="https://image1.ichuanyi.cn/{{module.image}}"/>
+					</a>
+				</div>
+			</div>
+			<!--挑款师精选-->
+			<div class="bg_white" ng-if="i==2" ng-repeat="(i,modules) in moduless">
+				<img class="widthbfb" ng-src="https://image1.ichuanyi.cn/{{modules[0].list[0].image}}"/>
+				<ion-scroll direction="x" scrollbar-x="false" scrollbar-y="false" class="widthbfb">
+					<div class="handpick overflow">
+						<a class="l" href="#" ng-repeat="(i,module) in modules[1].list">
+							<img class="widthbfb" ng-src="https://image1.ichuanyi.cn/{{module.image}}?imageMogr/v2/auto-orient/thumbnail/!290x/quality/80/"/>
+						</a>
+					</div>
+				</ion-scroll>
+			</div>
+			<!---->
+			<div class="overflow">
+				<a ng-href="#/AerliDetails/{{aerli.userId}}/{{aerli.suitId}}" class="bg_white aerlilist l" ng-repeat='aerli in aerlilist'>
+					<img ng-src="{{aerli.image}}?imageMogr/v2/auto-orient/thumbnail/!50x/quality/80/"/>
+					<div class="aerli overflow">
+						<img class="l" ng-src="https://image1.ichuanyi.cn/{{aerli.avatar}}?imageMogr/v2/auto-orient/thumbnail/!290x/quality/80/"/>
+						<span class="l user ellipsis">{{aerli.username}}</span>
+						<span class="r count">
+							<span class="icon ion-ios-heart-outline"></span>
+							<span>{{aerli.collectCount}}</span>
+						</span>
+					</div>
+				</a>
+			</div>
+			<ion-infinite-scroll on-infinite="loadMore()" distance="10%">
+				
+			</ion-infinite-scroll>
+		</div>
+
+	</ion-content>
+</ion-view>

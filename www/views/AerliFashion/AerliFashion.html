@@ -1,0 +1,28 @@
+<ion-view ng-title="{{fashionlist.subject}}">
+	<ion-content>
+		<div class="bg_white fashions fas" ng-repeat="fashion in fashionlist.list[0].bannerList">
+			<img ng-src="https://image1.ichuanyi.cn/{{fashion.image}}?imageMogr/v2/auto-orient/thumbnail/!290x/quality/80/"/>
+		</div>
+		<div class="readCounts fas">
+			<p><i class="icon ion-ios-heart-outline"></i></p>
+			<span>喜欢：{{fashionlist.collectCount}}</span>
+		</div>
+		<div class="fas">
+			<h3>相关阅读</h3>
+			<ul>
+				<li class="bg_white readCount overflow" ng-repeat="fashions in fashionlist.relatedMediaData">
+					<div class="l overflow">
+						<img ng-src="https://image1.ichuanyi.cn/{{fashions.image}}?imageMogr/v2/auto-orient/thumbnail/!290x/quality/80/"/>
+					</div>
+					<div class="l subject">
+						<p>{{fashions.subject}}</p>
+						<p><i class="icon ion-eye"></i>{{fashions.readCount}}</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</ion-content>
+</ion-view>
+<!--
+	relatedMediaData
+-->

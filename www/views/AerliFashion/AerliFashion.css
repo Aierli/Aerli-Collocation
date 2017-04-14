@@ -1,0 +1,68 @@
+.fas{
+	background-color: #F5F5F5;
+}
+.fashions{
+	padding-top: 43px;
+}
+.fashions img{
+	width: 100%;
+}
+.readCounts{
+	text-align: center;
+	padding: 50px 0;
+}
+.readCounts p{
+	width: 120px;
+	height: 120px;
+	margin: 30px auto;
+	border: 1px solid #CECECE;
+	background-color: #FFFFFF;
+	border-radius: 50%;
+	line-height: 120px;
+}
+.readCounts p i{
+	font-size: 45px;
+}
+.readCounts span{
+	font-size: 1.6rem;
+	color: #999999;
+	font-weight: bold;
+}
+.fas h3{
+	margin-bottom: 40px;
+	font-size: 1.5rem;
+	color: #666666;
+}
+.readCount{
+	padding: 15px;
+	margin: 15px auto;
+	position: relative;
+}
+.readCount>div:first-child{
+	width: 30%;
+}
+.readCount>div img{
+	width: 200%;
+	position: relative;
+	left: -50%;
+}
+.readCount .subject{
+	width: calc(70% - 20px);
+	line-height:40px;
+	margin-left: 20px;
+}
+.readCount .subject p:first-child{
+	font-size: 1.1rem;
+	color: #444444;
+}
+.readCount .subject p:last-child{
+	color: #999999;
+	font-size: 1rem;
+	position: absolute;
+	bottom: 0;
+	right: 20px;
+}
+.readCount .subject p:last-child i{
+	margin-right: 10px;
+}
+

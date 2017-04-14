@@ -1,0 +1,60 @@
+<ion-view>
+	<ion-content>
+		<div class="AerliDetails">
+			<div class="AerliDetail">
+				<img ng-src="https://image1.ichuanyi.cn/{{AerliDetails.image}}"/>
+				<ul class="bg_white overflow biaoqian">
+					<li class="l" ng-repeat='Details in AerliDetails.tags'>
+						{{Details.name}}
+					</li>
+				</ul>
+				<div class="unames overflow bg_white">
+					<img class="l" ng-src="https://image1.ichuanyi.cn/{{AerliDetails.avatar}}?imageMogr/v2/auto-orient/thumbnail/!290x/quality/80/"/>
+					<span class="l">{{AerliDetails.username}}</span>
+					<span class="r">+ 加关注</span>
+				</div>
+				<ul class="overflow bg_white Detail">
+					<li class="l" ng-repeat='Detail in AerliDetails.goods'>
+						<a href="">
+							<img ng-src="https://image1.ichuanyi.cn/{{Detail.image}}?imageMogr/v2/auto-orient/thumbnail/!290x/quality/80/" alt="" />
+							<p class="ellipsis">{{Detail.categoryName}}:{{Detail.name}}</p>
+							<p>
+								<span class="s1">{{Detail.price | currency:'￥'}}</span> / 
+								<span class="s2">{{Detail.originalPrice | currency:'￥'}}</span>
+							</p>
+						</a>
+					</li>
+				</ul>
+				<div class="packages bg_white">
+					<p class="overflow">
+						<span style="font-weight: bold;">{{AerliDetails.packageDiscount.title}}买价</span> = 
+						<span class="blocks">{{AerliDetails.packageDiscount.price | currency:'￥'}}</span> / 
+						<span class="dec">{{AerliDetails.packageDiscount.originalPrice | currency:'￥'}}</span>
+						<span class="baj">{{AerliDetails.packageDiscount.description}}</span>
+						<span class="blocks r">></span>
+					</p>
+				</div>
+				<div class="comments bg_white">
+					<p class="overflow">
+						<span class="l">购买评价：</span>
+						<span class="r">共{{AerliDetails.commentCount}}条购买评价 ></span>
+					</p>
+					<div class="comment overflow" ng-repeat="comment in AerliDetails.commentList">
+						<img class="l" src="https://image1.ichuanyi.cn/{{comment.avatar}}?imageMogr/v2/auto-orient/thumbnail/!290x/quality/80/"/>
+						<div class="overflow">
+							<p class="overflow">
+								<span class="l ellipsis">{{comment.username}}</span>
+								<span class="r">{{comment.createTime + '000' | date:'yyyy-MM-dd'}}</span>
+							</p>
+							<p>{{comment.comment}}</p>
+							<img ng-if="comment.images[0].image" src="https://image1.ichuanyi.cn/{{comment.images[0].image}}?imageMogr/v2/auto-orient/thumbnail/!290x/quality/80/"/>
+						</div>
+					</div>
+				</div>
+				<div class="promise">
+					<div></div>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

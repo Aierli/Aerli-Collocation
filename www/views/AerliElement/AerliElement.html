@@ -1,0 +1,20 @@
+<ion-view view-title="{{elementlist.subject}}">
+	<ion-content>
+		<div class="bg_white fashions fas" ng-repeat="elements in elementlist.list[0].bannerList">
+			<img ng-src="https://image1.ichuanyi.cn/{{elements.image}}?imageMogr/v2/auto-orient/thumbnail/!290x/quality/80/"/>
+		</div>
+		<ul class="bg_white overflow elementlist">
+			<li class="l elemens" ng-repeat="elemens in elementlist.list[0].goodsList">
+				<img ng-src="https://image1.ichuanyi.cn/{{elemens.image}}?imageMogr/v2/auto-orient/thumbnail/!290x/quality/80/" alt="" />
+				<p class="overflow price">
+					<span class="l">{{elemens.price | currency:'￥'}}</span>
+					<span class="r"><i class="icon ion-ios-heart-outline"></i>&nbsp;&nbsp;{{elemens.collectCount}}</span>
+				</p>
+			</li>
+		</ul>
+		<div class="readCounts fas">
+			<p><i class="icon ion-ios-heart-outline"></i></p>
+			<span>喜欢：{{elementlist.collectCount}}</span>
+		</div>
+	</ion-content>
+</ion-view>

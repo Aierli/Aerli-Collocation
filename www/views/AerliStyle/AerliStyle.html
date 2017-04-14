@@ -1,0 +1,62 @@
+<ion-view view-title="搭配风格">
+	<ion-content>
+		<div class="contents bg_white">
+			<section class="guesslist">
+				<h3>{{guesslist.title}}</h3>
+				<p></p>
+				<ion-scroll direction="x" scrollbar-x="false" scrollbar-y="false">
+					<ul class="overflow guesslis">
+						<li class="overflow guess l" ng-repeat="guess in guesslist.list">
+							<a href="javascript:void(0)">
+								<div class="bag"><p style="line-height: 3.2rem;">{{guess.tagName}}</p></div>
+								<img ng-src="https://image1.ichuanyi.cn/{{guess.image}}"/>
+							</a>
+						</li>
+					</ul>
+				</ion-scroll>
+			</section>
+			<section>
+				<h3>{{fashionlist.title}}</h3>
+				<p></p>
+				<ion-scroll direction="x" scrollbar-x="false" scrollbar-y="false">
+					<ul class="overflow fashionlis">
+						<li class="overflow l fashion" ng-repeat="fashion in fashionlist.list">
+							<a href="javascript:void(0)">
+								<div class="bag"><p style="line-height: 13rem; font-size: 1.3rem;">{{fashion.name}}</p></div>
+								<img ng-src="https://image1.ichuanyi.cn/{{fashion.image}}"/>
+							</a>
+						</li>
+					</ul>
+				</ion-scroll>
+			</section>
+		</div>
+		<div class="bg_white">
+			<section>
+				<h3>{{guidelist.title}}</h3>
+				<p></p>
+				<div class="guides overflow" ng-repeat="guides in guidelist.list">
+					<img class="l" ng-src="https://image1.ichuanyi.cn/{{guides.image}}"/>
+					<ul class="guide overflow">
+						<li class="r dib_vm ellipsis" ng-repeat="guide in guides.tags">
+							<div ng-style="{color: isHighlight == 1,colors : isHighlight == 0}">{{guide.tagName}}</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<h3>{{featureslist.title}}</h3>
+				<p></p>
+				<ion-scroll direction="x" scrollbar-x="false" scrollbar-y="false">
+					<ul class="overflow featureslist">
+						<li class="l features" ng-repeat="features in featureslist.list">
+							<img ng-src="https://image1.ichuanyi.cn/{{features.image}}?imageMogr/v2/auto-orient/thumbnail/!290x/quality/80/"/>
+						</li>
+					</ul>
+				</ion-scroll>
+			</section>
+			<section class="gd bg_white">
+				<div>更多热门主题 > </div>
+			</section>
+		</div>
+	</ion-content>
+</ion-view>
