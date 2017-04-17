@@ -1,4 +1,4 @@
-app.controller('AerliHomeCtrl',function($scope,$http,homes,$ionicSlideBoxDelegate){
+app.controller('AerliHomeCtrl',function($scope,$http,homes,$ionicSlideBoxDelegate,$interval){
 	$scope.model = {
     	activeIndex:0
   	};
@@ -17,6 +17,12 @@ app.controller('AerliHomeCtrl',function($scope,$http,homes,$ionicSlideBoxDelegat
 	$scope.pageClick = function() {
     	$ionicSlideBoxDelegate.next();
   	}
+	$interval(function() {
+		$ionicSlideBoxDelegate.update();
+		$ionicSlideBoxDelegate.loop(true);
+
+	}, 1000);
+
 	
 	
 	$scope.banners = [];
